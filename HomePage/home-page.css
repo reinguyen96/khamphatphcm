@@ -1,0 +1,79 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#page {
+    max-width: 940px;
+    min-width: 720px;
+    margin: 10px auto 10px auto;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #621212;
+    font-size: 350%;
+    text-shadow: 2px 2px 3px #ffffff;
+}
+
+h2,
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    color: #621212;
+    margin: 0px;
+}
+
+i {
+    color: gray;
+}
+
+#navigation {
+    background-color: #800000; /* Màu nền của thanh menu */
+    list-style-type: none; /* Bỏ dấu chấm tròn của danh sách */
+    margin: 0;
+    padding: 15px 15px; /* Tạo độ dày cho thanh menu */
+    display: flex; /* Cách hiện đại để dàn hàng ngang */
+    justify-content: center; /* Căn giữa các nút bấm */
+}
+
+/* 2. Căn chỉnh các mục li */
+#navigation li {
+    margin-right: 40px;
+}
+
+/* 3. Chỉnh màu sắc và định dạng chữ cho thẻ a */
+#navigation li a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    /*font-weight: bold;*/
+    font-family: Arial, sans-serif;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+#navigation li a:hover {
+    color: #ffcc00; /* Đổi sang màu vàng khi rê chuột */
+}
+
+/* Màu riêng cho nút đang được chọn (class="on") */
+#navigation li a.on {
+    border-bottom: 2px solid white;
+}
+
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333333;
+    line-height: 18pt;
+
+}
+
+p.noidungbentrai {
+    position: relative;
+    justify-content: center;
+    text-align: justify;
+    top: 10px;
+    left: 400px;
+    bottom: 50px;
+    width: 350px;
+
+}

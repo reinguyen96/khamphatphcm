@@ -32,7 +32,7 @@ body {
 }
 
 .hero-text h1 {           /*Định dạng chữ tiêu đề h1 Thành phố Chí Minh*/
-    font-size: 5vw;        /*size chữ 5% màn hình để tránh rớt chữ xuống hang*/
+    font-size: 3vw;        /*size chữ 5% màn hình để tránh rớt chữ xuống hang*/
     letter-spacing: 2px;
     text-shadow: 2px 3px 6px rgba(0,0,0,0.6);    /*đổ bóng chữ*/
 }
@@ -186,6 +186,7 @@ a {
 .item-section {
     padding-right: 50px
 }
+
 
 
 

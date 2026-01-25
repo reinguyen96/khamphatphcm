@@ -175,6 +175,19 @@ p {
     height: 100px;
 }
 
+#item-header {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.item-section {
+    padding-right: 50px
+}
+
+
 
 
 

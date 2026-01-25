@@ -1,48 +1,48 @@
-/* RESET CƠ BẢN */
+/* ĐỊNH DẠNG CHUNG CƠ BẢN */
 * {
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;    /*with và hight bao gồm cả padding + border*/
+    font-family: 'Times New Roman', Times, serif;    /*Phong chữ mặt định toàn trang*/ 
 }
-
+/*Định dạng body*/
 body {
     margin: 0;
-    background: linear-gradient(#f2f2f2, #ffffff);
+    background: linear-gradient(#f2f2f2, #ffffff);    /*Màu nền body chuyển màu từ xám f2f2f2 sang trắng */
 }
 
 /* HERO */
 .hero {
-    position: relative;
-    height: 55vh;
-    overflow: hidden;
+    position: relative;    /*Vị trí hiển thị của class hero tiêu đề*/
+    height: 50vh;          /*Cao 50% màn hình trình duyệt*/
+    overflow: hidden;      /*Ẩn phần video tràn kích thước mong muốn*/
 }
 
-.hero video {
+.hero video {    
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;    /*Video nền phủ kín vị trí đã set ở trên*/
 }
 
 .hero-text {
-    position: absolute;
-    top: 50%;
+    position: absolute;        /*Vị trí chữ đè trên video nền của tiêu đè*/
+    top: 50%;                  /*Chính giữa video hiển thị, màu trắng*/ 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);    
     text-align: center;
     color: white;
 }
 
-.hero-text h1 {
-    font-size: 52px;
+.hero-text h1 {           /*Định dạng chữ tiêu đề h1 Thành phố Chí Minh*/
+    font-size: 5vw;        /*size chữ 5% màn hình để tránh rớt chữ xuống hang*/
     letter-spacing: 2px;
-    text-shadow: 2px 3px 6px rgba(0,0,0,0.6);
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.6);    /*đổ bóng chữ*/
 }
 
-.hero-text h2 {
+.hero-text h2 {        /*định dạng chữ mô tả Thành phố mang tên Bác*/
     font-size: 24px;
     font-style: italic;
 }
 
-/* MENU */
+/* THANH MENU */
 #navigation {
     background-color: #800000;
     list-style: none;
@@ -56,44 +56,44 @@ body {
     margin: 0 30px;
 }
 
-#navigation a {
+#navigation a {        /*Thẻ a trên thanh menu*/
     color: white;
-    text-decoration: none;
+    text-decoration: none;    /*bỏ dấu gạch ngang*/
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-#navigation a:hover,
+#navigation a:hover,    //Đổi màu vàng khi chuột di vào các lựa chọn của menu
 #navigation a.on {
     color: #ffcc00;
 }
 
-/* INFO */
+/* INFO 
 .info {
     text-align: center;
     color: gray;
     font-size: 14px;
     margin: 20px 0 40px;
-}
+}*/
 
 /* PAGE */
-#page {
+#page {                            /*Định dạng vào chính giữa màn hình để dễ đọc*/
     max-width: 1100px;
     margin: 0 auto 80px;
     background: white;
     padding: 50px 60px;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-radius: 16px;        /*bo góc khung trang*/
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);    /*đỗ bóng xám mờ tạo độ sâu*/
 }
 
 /* TIÊU ĐỀ */
-h2 {
+h2 {                /*Dòng chào mừng*/
     color: #621212;
     font-size: 30px;
     margin-bottom: 25px;
 }
 
-h3 {
+h3 {                /*Dòng nguồn gốc tên gọi*/
     color: #621212;
     font-size: 24px;
     margin: 60px 0 30px;
@@ -101,16 +101,17 @@ h3 {
     border-left: 6px solid #800000;
 }
 
-h4 {
+h4 {            /*Các dòng tên*/
     color: #800000;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* CONTENT CARD */
+/*Nội dung và hình ảnh minh họa trình bày trên 1 dòng và do sole hình ảnh và nội dung bên trái, phải để dễ đọc không nhàm chán */
+/* PHẦN CONTENT */
 .content-row {
-    display: flex;
-    gap: 35px;
+    display: flex;    /*Bố cục thành 2 cột*/
+    gap: 35px;    /*khoản cách giữa nội dung và hình ảnh*/
     align-items: center;
     margin-bottom: 60px;
 
@@ -118,16 +119,14 @@ h4 {
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-
-    transition: all 0.7s ease;
 }
 
 /* SO LE HÌNH ẢNH VÀ ĐOẠN VĂN */
-.content-row:nth-of-type(even) {
-    flex-direction: row-reverse;
+.content-row:nth-of-type(even) {    /*Dùng cho content row vị trí dòng chẵn even*/
+    flex-direction: row-reverse;    /*Đảo ngược lại vị trí ảnh và nôi dung*/
 }
 
-.content-row img {
+.content-row img {        /*Định dạng hình ảnh minh họa của nội dung*/
     width: 360px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
@@ -175,14 +174,7 @@ p {
     width: 100px;
     height: 100px;
 }
-.column-1 {
-    width: 70%;
-    list-style-type: none;
-}
 
-.column-2 {
-    width: 30%;
-}
 
 
 

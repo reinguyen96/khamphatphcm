@@ -32,6 +32,11 @@ $(document).ready(function () { //đợi DOM tải xong mới chạy js
         }, 600);
     });
 
+    $(windown).on("load", function(){
+        $(".content-row").addClass("show");
+    });
+
 });
+
 
 

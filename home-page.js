@@ -7,7 +7,7 @@ $(document).ready(function () { //đợi DOM tải xong mới chạy js
     });
 
     /* HIÊU ỨNG CUỘN TRANG LÊN */
-    $("#navigation a").click(function (e) {        //Hiệu ứng cuộn lên khi click chọn vào thanh menu (các thẻ a trong navigation trên html)
+    $("#navigation a").click(function (e) {        //Hiệu ứng cuộn lên khi click chọn vào thanh menu - các thẻ a trong navigation trên html
         let target = $(this).attr("href");         //Lấy href của link trang tương ứng
         if (target.startsWith("#")) {              //kiểm tra href bắt đầu bằng #
             e.preventDefault();                    //ngăn các mặc định để xử lý cuộn
@@ -18,23 +18,20 @@ $(document).ready(function () { //đợi DOM tải xong mới chạy js
     });
 
     /* VỀ ĐẦU TRANG */
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $("#backToTop").fadeIn();
+    $(window).scroll(function () {                //khi cuộn trang
+        if ($(this).scrollTop() > 300) {          //khoảng cách đầu trang 300px thì xuất hiện nút về đầu trang
+            $("#backToTop").fadeIn();            
         } else {
-            $("#backToTop").fadeOut();
+            $("#backToTop").fadeOut();            //ngược lại thì ẩn đi
         }
     });
 
-    $("#backToTop").click(function () {
-        $("html, body").animate({
+    $("#backToTop").click(function () {        //Khi lick chọn nút trở về
+        $("html, body").animate({              //Thực hiện cuộn lên về đầu trang, tgian 600ms
             scrollTop: 0
         }, 600);
     });
 
-    /* LOAD TRANG XONG/
-    $(window).on("load", function () {
-    $(".content-row").addClass("show");
 });
-});
+
 

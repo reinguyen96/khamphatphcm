@@ -1,44 +1,23 @@
-$(document).ready(function () {
+$(document).ready(function () { //đợi DOM tải xong mới chạy js
 
-    /* MENU ACTIVE */
-    $("#navigation a").click(function () {
-        $("#navigation a").removeClass("on");
-        $(this).addClass("on");
+    /* THANH MENU */
+    $("#navigation a").click(function () {        //Hành động click chuột
+        $("#navigation a").removeClass("on");    //Xóa class on khỏi các link menu
+        $(this).addClass("on");                  //Thêm class on, đánh dấu mục đang chọn
     });
 
-    /* SMOOTH SCROLL */
-    $("#navigation a").click(function (e) {
-        let target = $(this).attr("href");
-        if (target.startsWith("#")) {
-            e.preventDefault();
-            $("html, body").animate({
-                scrollTop: $(target).offset().top - 60
-            }, 600);
+    /* HIÊU ỨNG CUỘN TRANG LÊN */
+    $("#navigation a").click(function (e) {        //Hiệu ứng cuộn lên khi click chọn vào thanh menu (các thẻ a trong navigation trên html)
+        let target = $(this).attr("href");         //Lấy href của link trang tương ứng
+        if (target.startsWith("#")) {              //kiểm tra href bắt đầu bằng #
+            e.preventDefault();                    //ngăn các mặc định để xử lý cuộn
+            $("html, body").animate({              //xly hiệu ứng cuộn 
+                scrollTop: $(target).offset().top - 60        //vị trí cuộn cách đầu trang 60px
+            }, 600);                                           //tgian cuộn 600ms
         }
     });
 
-    /* CLICK IMAGE → MODAL */
-    $(".content-row img").click(function () {
-        $("#modal-img").attr("src", $(this).attr("src"));
-        $("#modal").fadeIn();
-    });
-
-    $("#modal, #close").click(function () {
-        $("#modal").fadeOut();
-    });
-
-    /* SCROLL EFFECT */
-    $(window).on("scroll", function () {
-        $(".content-row").each(function () {
-            let elementTop = $(this).offset().top;
-            let windowBottom = $(window).scrollTop() + $(window).height() - 100;
-            if (windowBottom > elementTop) {
-                $(this).addClass("show");
-            }
-        });
-    });
-
-    /* BACK TO TOP */
+    /* VỀ ĐẦU TRANG */
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $("#backToTop").fadeIn();
@@ -53,7 +32,9 @@ $(document).ready(function () {
         }, 600);
     });
 
+    /* LOAD TRANG XONG/
     $(window).on("load", function () {
     $(".content-row").addClass("show");
 });
 });
+

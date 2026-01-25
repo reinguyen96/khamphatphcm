@@ -63,7 +63,8 @@ body {
     letter-spacing: 1px;
 }
 
-#navigation a:hover,    //Đổi màu vàng khi chuột di vào các lựa chọn của menu
+/*Đổi màu vàng khi chuột di vào các lựa chọn của menu*/
+#navigation a:hover,    
 #navigation a.on {
     color: #ffcc00;
 }
@@ -186,6 +187,7 @@ a {
 .item-section {
     padding-right: 50px
 }
+
 
 
 

@@ -202,6 +202,11 @@ p {
     padding: 30px 20px;
     gap: 100px
 }
+#logo {
+    width: 10px;
+    height: 10px;
+}
+
 
 /* 3 ảnh trên 1 hàng*/
 .image-row {
@@ -250,10 +255,7 @@ p {
     color: #a00000;
 }
 
-#logo {
-    width: 10px;
-    height: 10px;
-}
+
 
 
 

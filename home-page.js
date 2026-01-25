@@ -19,7 +19,7 @@ $(document).ready(function () { //đợi DOM tải xong mới chạy js
 
     /* VỀ ĐẦU TRANG */
     $(window).scroll(function () {                //khi cuộn trang
-        if ($(this).scrollTop() > 300) {          //khoảng cách đầu trang 300px thì xuất hiện nút về đầu trang
+        if ($(this).scrollTop() > 200) {          //khoảng cách đầu trang 300px thì xuất hiện nút về đầu trang
             $("#backToTop").fadeIn();            
         } else {
             $("#backToTop").fadeOut();            //ngược lại thì ẩn đi
@@ -32,11 +32,9 @@ $(document).ready(function () { //đợi DOM tải xong mới chạy js
         }, 600);
     });
 
-    $(window).on("load", function(){
-        $(".content-row").addClass("show");
-    });
 
 });
+
 
 
 

@@ -193,6 +193,15 @@ p {
     background-color: #a00000;
 }
 
+#footer-wrapper {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    padding: 30px 20px;
+    gap: 100px
+}
 
 /* 3 ảnh trên 1 hàng*/
 .image-row {
@@ -240,4 +249,5 @@ p {
 .image-card:hover p {
     color: #a00000;
 }
+
 
